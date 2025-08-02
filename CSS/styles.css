@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+main {
+    width: 80%;
+    height: 50%;
+    margin: 50px auto; /* 50px arriba/abajo, centrado horizontal */
+    border: 3px solid #428bca;
+    box-sizing: border-box; /* para que el padding no aumente el ancho total */
+}
+
+
+.imagenLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra las imágenes horizontalmente */
+}
+
+
+.LoginGoogle {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /*espacio entre los elementos*/
+    font-weight: bold; /* Negrita */
+}
+
+.loginG {
+    width: 200px; /* Cambia el ancho de imagenes*/
+    height: auto; /* Mantiene proporciones de la imagen para que no se distorcione */
+}
+
+.seccionLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 280px; /* Tamaño del contenedor */
+    margin: 0 auto; /* para centrar el formulario en pantalla */
+}
+
+    .seccionLogin label {
+        align-content: start;  
+        display: block; /* Asegura que ocupe su propia línea */
+    }
+    .seccionLogin input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+    }
+
+
+.btnLogin {
+    display: block; /* Hace que el botón ocupe todo el ancho disponible */
+    margin: 20px auto; /* Auto en izquierda y derecha para centrarlo */
+    background-color: #428bca;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 70px; /* Espacio debajo del botón */
+}
+
+    .btnLogin:hover {
+        background-color: #3071a9;
+    }
+
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc; /*  aquí se agrega la línea */
+    font-size: 14px;
+    color: #666;
+    background: none;
+    margin-top: 250px;
+}
+
+    footer p {
+        margin: 30px 0;
+    }
+
+
+    footer nav a {
+        margin: 0 8px; /* Espacio horizontal entre links */
+        text-decoration: none; /* Quita subrayado */
+        color: #666; /* Color igual al resto del footer */
+    }
+
+        footer nav a:hover {
+            text-decoration: underline; /* Subraya el link al pasar el mouse para indicar interactividad */
+        }

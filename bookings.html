@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto 01</title>
+    <link rel="stylesheet" href="CSS/stylesBookings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="imagenLogo">
+            <img src="imagenes/aventones.png" alt="logo de la pagina" />
+        </div>
+
+        <nav id="Navegacion">
+            <ul class="menuPrincipal">
+                <li><a href="searchRides.html">Home</a></li>
+                <li> <a href="myRides.html">Rides</a></li>
+                <li class="activo"><a href="bookings.html">Bookings</a></li>
+            </ul>
+
+            <div class="accionesAdicionales">
+                <input type="text" id="search" placeholder="Search..." />
+                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+            </div>
+
+
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div id="userOptions">
+            <table id="options">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="index.html">Logout</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td id="seleccionado">
+                            <a href="configuration.html">Settings</a>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+        <h1>Bookings</h1>
+
+
+
+        <div class="rides-actions">
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Ride</th>
+                    <th>Accept / Reject</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="userInfo">
+                            <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil">
+                            <span class="username">Fulano</span>
+                        </div>
+                    </td>
+                    <td>Ciudad Quesada - Naranjo</td>
+                    <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <div class="userInfo">
+                            <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil">
+                            <span class="username">yluna</span>
+                        </div>
+                    </td>
+                    <td>Fortuna - San José</td>
+                    <td><a href="#">Accept</a> | <a href="#">Reject</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+    </main>
+
+
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="searchRides.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="registro.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+
+</body>
+</html>

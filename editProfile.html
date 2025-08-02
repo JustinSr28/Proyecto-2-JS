@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto 01</title>
+    <link rel="stylesheet" href="CSS/stylesEditProfile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="imagenLogo">
+            <img src="imagenes/aventones.png" alt="logo de la pagina" />
+        </div>
+
+        <nav id="Navegacion">
+            <ul class="menuPrincipal">
+                <li class="activo"><a href="searchRides.html">Home</a></li>
+                <li> <a href="myRides.html">Rides</a></li>
+                <li ><a href="bookings.html">Bookings</a></li>
+            </ul>
+
+            <div class="accionesAdicionales">
+                <input type="text" id="search" placeholder="Search..." />
+                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+            </div>
+
+
+        </nav>
+    </header>
+
+    <main>
+
+        <h1> Edit Profile </h1>
+
+        <form action="#" method="post" class="edit-form">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label id="labelName" for="InputName"> First Name </label>
+                    <input type="text" id="inputName" name="InputName" placeholder="Bladimir" />
+                </div>
+                <div class="form-group">
+                    <label id="labelLastName" for="InputLastName"> Last Name </label>
+                    <input type="text" id="InputLastName" name="InputLastName" placeholder="Arroyo" />
+
+                </div>
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label id="labelEmail" for="Email"> First Name </label>
+                    <input type="text" id="Email" name="Email" placeholder="bladimir.ab@gmail.com" />
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label id="labelPass" for="InputPass"> Password </label>
+                    <input type="text" id="InputPass" name="InputPass" />
+                </div>
+                <div class="form-group">
+                    <label id="labelRepetPass" for="InputRepPass"> Repet Password </label>
+                    <input type="text" id="InputRepPass" name="InputRepPass" />
+
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label id="labelAdress" for="Adress"> Adress </label>
+                    <input type="text" id="Adress" name="Adress" placeholder="2km Norte" />
+                </div>
+
+            </div>
+            <div id="Countries">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected hidden>Select a country</option>
+                            <option value="Costa Rica" selected>Costa Rica</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="USA">United States</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="labelState" for="InputState">State</label>
+                        <input type="text" id="InputState" name="InputState" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label id="labelCity" for="InputCity"> City </label>
+                    <input type="text" id="InputCity" name="InputCity" />
+                </div>
+                <div class="form-group">
+                    <label id="labelPhone" for="InputPhone"> Phone Number </label>
+                    <input type="text" id="InputPhone" name="InputPhone" />
+
+                </div>
+            </div>
+
+
+            <div class="form-actions">
+                <a href="searchRides.html">Cancel</a>
+                <button type="submit">Save</button>
+            </div>
+
+
+
+        </form>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="searchRides.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="registro.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+
+</body>
+</html>

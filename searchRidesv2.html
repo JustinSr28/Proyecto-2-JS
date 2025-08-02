@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto 01</title>
+    <link rel="stylesheet" href="CSS/stylesSearchRidesv2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="imagenLogo">
+            <img src="imagenes/aventones.png" alt="logo de la pagina" />
+        </div>
+
+        <nav id="Navegacion">
+            <ul class="menuPrincipal">
+                <li class="activo"><a href="searchRides.html">Home</a></li>
+                <li><a href="myRides.html">Rides</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+            </ul>
+
+            <div class="accionesAdicionales">
+                <input type="text" id="search" placeholder="Search..." />
+                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+            </div>
+
+
+        </nav>
+    </header>
+
+
+
+    <main>
+
+        <h1>Search Rides</h1>
+
+        <div class="contenedor">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="from">From</label>
+                    <select id="from" name="from" required>
+                        <option value="Ciudad Quesada">Ciudad Quesada</option>
+                        <option value="Alajuela">Alajuela</option>
+                        <option value="Cartago">Cartago</option>
+                        <option value="Heredia">Heredia</option>
+                        <option value="Guanacaste">Guanacaste</option>
+                        <option value="Puntarenas">Puntarenas</option>
+                        <option value="Limón">Limón</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <select id="to" name="to" required>
+                        <option value="Zarcero">Zarcero</option>
+                        <option value="Alajuela">Alajuela</option>
+                        <option value="Cartago">Cartago</option>
+                        <option value="Heredia">Heredia</option>
+                        <option value="Guanacaste">Guanacaste</option>
+                        <option value="Puntarenas">Puntarenas</option>
+                        <option value="Limón">Limón</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="rides-actions">
+                        <a href="#" class="btn">Find Rides</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="days">
+                <label for="date" id="Labeldays">Days</label>
+                <label><input type="checkbox" name="days" value="Mon" checked> Mon</label>
+                <label><input type="checkbox" name="days" value="Tue" checked> Tue</label>
+                <label><input type="checkbox" name="days" value="Wed" checked> Wed</label>
+                <label><input type="checkbox" name="days" value="Thu" checked> Thu</label>
+                <label><input type="checkbox" name="days" value="Fri" checked> Fri</label>
+                <label><input type="checkbox" name="days" value="Sat" checked> Sat</label>
+                <label><input type="checkbox" name="days" value="Sun" checked> Sun</label>
+            </div>
+
+        </div>
+
+        <div class="rides-results">
+
+
+            <p class="rides-label">
+                Rides found from <strong>Quesada</strong> to <strong>Zarcero</strong>
+            </p>
+
+
+            <table class="rides-table">
+                <thead>
+                    <tr>
+                        <th>Driver</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Seats</th>
+                        <th>Car</th>
+                        <th>Fee</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="userInfo">
+                                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil">
+                                <span class="username">barroyo</span>
+                            </div>
+                        </td>
+                        <td><a href="#">Quesada</a></td>
+                        <td>Alajuela</td>
+                        <td>2</td>
+                        <td>Nissan Pathfinder 2015</td>
+                        <td>$5</td>
+                        <td><a href="#">Request</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="userInfo">
+                                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil">
+                                <span class="username">barroyo</span>
+                            </div>
+                        </td>
+                        <td><a href="#">Quesada</a></td>
+                        <td>Naranjo</td>
+                        <td>1</td>
+                        <td>Toyota Corolla 2020</td>
+                        <td>$10</td>
+                        <td><a href="#">Request</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="userInfo">
+                                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil">
+                                <span class="username">yluna</span>
+                            </div>
+                        </td>
+                        <td><a href="#">Aguas Zarcas</a></td>
+                        <td>Naranjo</td>
+                        <td>1</td>
+                        <td>Ford Festiva 1990</td>
+                        <td>--</td>
+                        <td><a href="#">Request</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div class="map-container">
+                <img src="imagenes/mapa.png" alt="Mapa de ubicación">
+            </div>
+
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="searchRides.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="registro.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+
+</body>
+</html>

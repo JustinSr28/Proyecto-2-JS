@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto 01</title>
+    <link rel="stylesheet" href="CSS/stylesEditRide.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="imagenLogo">
+            <img src="imagenes/aventones.png" alt="logo de la pagina" />
+        </div>
+
+        <nav id="Navegacion">
+            <ul class="menuPrincipal">
+                <li><a href="searchRides.html">Home</a></li>
+                <li  class="activo"> <a href="myRides.html">Rides</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+            </ul>
+
+            <div class="accionesAdicionales">
+                <input type="text" id="search" placeholder="Search..." />
+                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+            </div>
+
+
+        </nav>
+    </header>
+
+    <main class="rides-container">
+
+        <h1>Edit Ride</h1>
+
+        <form action="#" method="post" class="rides-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="departure">Departure from</label>
+                    <input type="text" id="departure" name="departure" placeholder="Quesada" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="arrive">Arrive to</label>
+                    <input type="text" id="arrive" name="arrive" placeholder="Zarcero" required>
+
+                </div>
+            </div>
+
+            <label for="date" id="Labeldays">Days</label>
+            <div class="days">
+
+                <label><input type="checkbox" name="days" value="Mon" checked> Mon</label>
+                <label><input type="checkbox" name="days" value="Tue" checked> Tue</label>
+                <label><input type="checkbox" name="days" value="Wed" checked> Wed</label>
+                <label><input type="checkbox" name="days" value="Thu" checked> Thu</label>
+                <label><input type="checkbox" name="days" value="Fri" checked> Fri</label>
+                <label><input type="checkbox" name="days" value="Sat" checked> Sat</label>
+                <label><input type="checkbox" name="days" value="Sun" checked> Sun</label>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" value="10:00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="seats" id="seats">Seats</label>
+                    <input type="number" id="seats" name="seats" min="1" value="2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fee">Fee</label>
+                    <input type="number" id="fee" name="fee" placeholder="0.00" step="0.01" value="15" required>
+                </div>
+            </div>
+
+            <label id="vehicle">Vehicle Details</label>
+
+            <div id="vehicle-Details">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="marca">Make</label>
+                        <select id="marca" name="marca" required>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Ford">Ford</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" id="model" name="carModel" placeholder="Car model" value="Pathfinder" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="arrive">Year</label>
+                        <input type="number" id="arrive" name="arrive" min="1" value="2020" required>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+                <a href="myRides.html">Cancel</a>
+                <button type="submit">Create</button>
+            </div>
+
+
+
+        </form>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="searchRides.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="registro.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column; /* Se establece direccion porque el logo va arriba*/
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto; /* <-- esto centra el header mismo */
+}
+
+.imagenLogo {
+    margin: 20px 0;
+}
+
+    .imagenLogo img {
+        width: 400px;
+        height: auto;
+    }
+
+/* Contenedor mayor, Padre */
+nav#Navegacion {
+    display: flex;
+    justify-content: space-between; /* Separa los elementos, el menu y las acciones adicionales*/
+    align-items: center;
+    width: 90%;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+/* Contenedor */
+.menuPrincipal {
+    display: flex; /*Aqui no hace falta la direccion ya que por defecto es vertical*/
+    list-style: none;
+}
+
+    .menuPrincipal li {
+        margin: 0 20px; /* Espacio horizontal entre los elementos del menú */
+    }
+
+    .menuPrincipal a {
+        text-decoration: none;
+        color: #555;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .menuPrincipal .activo a {
+        background-color: #3e8ed0;
+        color: white;
+        border-radius: 3px;
+    }
+
+/* Contenedor */
+.accionesAdicionales {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Aqui si va gab ya que es separacion de los elementos dentro del contenedor*/
+}
+
+#search {
+    border: 1px solid #ccc; /* Se hace borde */
+    border-radius: 5px; /* Se establece borde */
+    height: 35px;
+    width: 200px;
+    padding: 0 10px; /* Separa lo de adentro del input */
+}
+
+.perfil {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Imagen redonda */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+}
+
+main {
+    max-width: 1000px; /* Tamaño del contenedor main*/
+    margin: 50px auto; /* distnacia entre el main y header */
+    text-align: center;
+}
+
+.rides-container { /* centrar el main*/
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+main h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: grey;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+    display: block; /* DisplayBlock se adapta al texto*/
+    width: 300px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+main #userOptions {
+    display: flex;
+    width: 137%;
+    justify-content: right;
+    margin-left: 20px; /* Espacio entre el título y las opciones de usuario */
+}
+
+#options {
+    margin-top: -50px; /* está mal pero no entiendo que hacer */
+    width: 15%;
+    height: 15%;
+    text-align: left;
+    border: 2px solid black; /* borde negro */
+}
+
+    #options a {
+        text-decoration: none; /* Quita subrayado */
+        color: black; /* Color igual al resto del footer */
+    }
+
+#userOptions td {
+    border-bottom: 2px solid black; /* línea divisoria negra */
+}
+
+#seleccionado {
+    background-color: lightgrey;
+}
+
+
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.userInfo {
+    display: flex;
+    margin: 0 20px 0px;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos dentro del contenedor */
+}
+
+
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+td a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+    td a:hover {
+        text-decoration: underline;
+    }
+
+
+
+.rides-form {
+    margin-top: 50px; /* Espacio entre el título y el formulario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#fotoPerfil {
+    width: 70px; /* Ancho del input de foto de perfil */
+    height: 70px; /* Alto del input de foto de perfil */
+    border-radius: 50%; /* Hace que el input sea redondo */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+   
+}
+
+#nombreUsuario {
+    margin-top : 7px;
+    font-size: 15px; /* Tamaño de fuente del nombre de usuario */
+}
+
+
+.departureForm {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* centra horizontalmente el grupo */
+    gap: 100px; /* espacio entre "departure" y "arrive" */
+    font-family: sans-serif;
+}
+
+.box {
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos dentro de la caja */
+    align-items: flex-start; /* todo alineado a la izquierda dentro del box */
+}
+
+    .box h3 {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+.info {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;       
+    font-size: 28px;
+    color: #555;
+    margin: 0;
+}
+
+
+#Labeldays {
+    margin-top: 20px; /* Espacio entre el título y el label */
+    text-align: left;
+    width: 100%; /* O igual al ancho del contenedor del formulario */
+    display: block; /* Para que se vea en línea aparte */
+}
+
+.days {
+    margin-top: 10px; /* Espacio entre el label y los checkboxes */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 15px; /* Espacio entre el label y los checkboxes */
+}
+
+    .days label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    input[type= "checkbox"]{
+        width: 15px; /* Ancho del checkbox */
+        height: 15px; /* Alto del checkbox */
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+    }
+
+
+
+
+.form-row {
+    width: 120%; /* Ancho del formulario */
+    height: 50px; /* Altura de cada fila del formulario */
+    margin-top: 20px; /* Espacio entre filas del formulario */
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap; /* se colapsan verticalmente */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alinea los elementos dentro del grupo */
+    gap: 10px; /* Espacio entre el label y el input */
+}
+
+    .form-group label {
+        margin-left: 15px; /* Espacio entre el borde izquierdo y el label */
+        margin-right: 45px;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        margin-left: 4px; /* Espacio entre el label y el input */
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+
+
+
+
+
+#vehicle {
+    text-align: left;
+    width: 100%; /* O igual al ancho del contenedor del formulario */
+    display: block; /* Para que se vea en línea aparte */
+    margin-top: 20px; 
+}
+
+#vehicle-Details {
+    width: 110%; /* Ancho del contenedor del formulario */
+    display: flex;
+    border: 1px solid #ccc; /* Borde alrededor del contenedor */
+    padding: 20px; /* Espacio interno del contenedor */
+   
+}
+
+#vehicle-Details .form-row {
+    display: flex;
+    gap: 20px; /* Espacio horizontal entre los grupos (Make, Model, Year) */
+    align-items: center; /* Alinea verticalmente los labels con los inputs */
+    flex-wrap: wrap; /* Permite que se acomoden si el espacio es pequeño */
+    font-family: sans-serif; /* Solo si querés definir fuente aquí */
+}
+
+#vehicle-Details .form-group {
+    display: flex;
+    align-items: center; /* Label e input alineados al centro verticalmente */
+}
+
+    
+    #vehicle-Details .form-group label {
+        font-size: 14px;
+        margin-right: 2px; /* Espacio entre el label y el input */
+    }
+
+    #vehicle-Details .form-group input,
+    #vehicle-Details .form-group select {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 14px;
+        font-size: 14px;
+       
+        width: 125px; /* Ancho del input */
+    }
+
+
+    #model {
+        color: grey; /* Color gris para el texto del modelo */
+    }
+
+input[type="number"] {
+    width: 80px;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: left; /* para alinear el texto a la izquierda */
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px; /* o el espacio que desees arriba */
+}
+
+    .form-actions a {
+        color: #007bff; /* azul tipo link */
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .form-actions a:hover {
+            text-decoration: underline;
+        }
+
+    .form-actions button {
+        background-color: #337ab7; /* azul similar al de la imagen */
+        color: white;
+        border: 1px solid #2e6da4;
+        padding: 8px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+        height: 40px; /* Altura del link */
+        width: 200px; /* Ancho del link */
+    }
+
+        .form-actions button:hover {
+            background-color: #286090; /* tono más oscuro al hover */
+        }
+
+
+
+footer {
+    margin-top: 100px; /* Espacio entre el main y el footer */
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc; /*  aquí se agrega la línea */
+    font-size: 14px;
+    color: #666;
+    background: none;
+}
+
+    footer p {
+        margin: 30px 0; /* Espacio entre menu y copy */
+    }
+
+
+    footer nav a {
+        margin: 0 8px; /* Espacio horizontal entre links */
+        text-decoration: none; /* Quita subrayado */
+        color: #666; /* Color igual al resto del footer */
+    }
+
+        footer nav a:hover {
+            text-decoration: underline; /* Subraya el link al pasar el mouse para indicar interactividad */
+        }

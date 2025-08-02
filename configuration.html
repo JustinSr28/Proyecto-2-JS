@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto 01</title>
+    <link rel="stylesheet" href="CSS/stylesConfiguration.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="imagenLogo">
+            <img src="imagenes/aventones.png" alt="logo de la pagina" />
+        </div>
+
+        <nav id="Navegacion">
+            <ul class="menuPrincipal">
+                <li><a href="searchRides.html">Home</a></li>
+                <li> <a href="myRides.html">Rides</a></li>
+                <li class="activo"><a href="#">Bookings</a></li>
+            </ul>
+
+            <div class="accionesAdicionales">
+                <input type="text" id="search" placeholder="Search..." />
+                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+            </div>
+
+
+        </nav>
+    </header>
+
+    <main class="rides-container">
+
+        <h1>Configuration</h1>
+
+        <form action="#" method="post" class="conf-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Public Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Bladimir" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bio">Public Bio:</label>
+                    <input type="text" id="bio" name="bio">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <a href="searchRides.html">Cancel</a>
+                <button type="submit" href="searchRides.html">Save</button> <!--No redirecciona ya que es un boton-->
+            </div>
+
+        </form>
+
+    </main>
+
+     <footer>
+        <nav class="footer-nav">
+            <a href="searchRides.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="registro.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+</body>
+    </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto 01</title>
+    <link rel="stylesheet" href="CSS/stylesRides.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="imagenLogo">
+            <img src="imagenes/aventones.png" alt="logo de la pagina" />
+        </div>
+
+        <nav id="Navegacion">
+            <ul class="menuPrincipal">
+                <li><a href="searchRides.html">Home</a></li>
+                <li class="activo"> <a href="myRides.html">Rides</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+            </ul>
+
+            <div class="accionesAdicionales">
+                <input type="text" id="search" placeholder="Search..." />
+                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+            </div>
+
+
+        </nav>
+    </header>
+
+
+
+    <main>
+    <h1>My rides</h1>
+
+    <div class="rides-actions">
+        <a href="NewRide.html" class="btn">New Ride</a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Seats</th>
+                <th>Car</th>
+                <th>Fee</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#">Quesada</a></td>
+                <td>Alajuela</td>
+                <td>2</td>
+                <td>Nissan Pathfinder 2015</td>
+                <td>$5</td>
+                <td><a href="EditRide.html">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Quesada</a></td>
+                <td>Naranjo</td>
+                <td>1</td>
+                <td>Toyota Corolla 2020</td>
+                <td>$10</td>
+                <td><a href="EditRide.html">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Aguas Zarcas</a></td>
+                <td>Naranjo</td>
+                <td>1</td>
+                <td>Ford Festiva 1990</td>
+                <td>--</td>
+                <td><a href="EditRide.html">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </main>
+
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="searchRides.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="registro.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+
+</body>
+</html>
