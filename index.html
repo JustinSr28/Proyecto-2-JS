@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Proyecto 01</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <script src="JS/app.js"></script>
+    <script src="JS/login.js" defer></script>
+
 </head>
 
 <body>
@@ -20,19 +23,16 @@
             <p class="or"> Or </p>
         </div>
 
-        <section class="seccionLogin">
+        <form class="seccionLogin" id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username">
 
-            <label for="username" class="spaceForUser">Username</label>
-            <input type="text" id="username" />
+            <label for="password">Password</label>
+            <input type="password" id="password">
 
-            <label for="password" class="spaceForPass">Password</label>
-            <input type="password" id="password" />
+            <button type="submit" class="btnLogin">Login</button>
+        </form>
 
-            <p class="registro">Not an user? <a href="registro.html">Register Now</a></p>
-
-            <a href="myRides.html" class="btnLogin">Login</a>
-
-        </section>
 
 
     </main>
