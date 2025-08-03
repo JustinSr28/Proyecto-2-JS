@@ -75,7 +75,7 @@ function storeInputs() {
     alert('Registration successful!');
     
     setTimeout(() => {
-        window.location.href = "myRides.html"; 
+        window.location.href = "index.html"; 
     }, 1000);
 
     return true;
