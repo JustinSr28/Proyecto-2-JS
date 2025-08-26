@@ -6,6 +6,7 @@
     <title>Proyecto 01</title>
     <link rel="stylesheet" href="CSS/stylesEditRide.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="JS/editMyRides.js"></script>
 
 
 </head>
@@ -20,16 +21,21 @@
         <nav id="Navegacion">
             <ul class="menuPrincipal">
                 <li><a href="searchRides.html">Home</a></li>
-                <li  class="activo"> <a href="myRides.html">Rides</a></li>
-                <li><a href="bookings.html">Bookings</a></li>
+                <li> <a href="myRides.html">Rides</a></li>
+                <li class="activo"><a href="bookings.html">Bookings</a></li>
             </ul>
 
             <div class="accionesAdicionales">
                 <input type="text" id="search" placeholder="Search..." />
-                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+                <div class="dropdown">
+                    <img src="imagenes/usuario.png" alt="User" onclick="toggleMenu()">
+                    <div id="userMenu" class="dropdown-content">
+                        <a href="editProfile.html">Profile</a>
+                        <a href="configuration.html">Configuration</a>
+                        <a href="#" onclick="logout()">Log out</a>
+                    </div>
+                </div>
             </div>
-
-
         </nav>
     </header>
 
@@ -37,7 +43,7 @@
 
         <h1>Edit Ride</h1>
 
-        <form action="#" method="post" class="rides-form">
+        <form action="submit" method="post" class="rides-form" id="editRideForm">
             <div class="form-row">
                 <div class="form-group">
                     <label for="departure">Departure from</label>
@@ -86,8 +92,8 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="marca">Make</label>
-                        <select id="marca" name="marca" required>
+                        <label for="make">Make</label>
+                        <select id="make" name="make" required>
                             <option value="Nissan">Nissan</option>
                             <option value="Toyota">Toyota</option>
                             <option value="Hyundai">Hyundai</option>
@@ -102,13 +108,13 @@
 
                     <div class="form-group">
                         <label for="model">Model</label>
-                        <input type="text" id="model" name="carModel" placeholder="Car model" value="Pathfinder" required>
+                        <input type="text" id="model" name="model" placeholder="Car model" value="Pathfinder" required>
 
                     </div>
 
                     <div class="form-group">
-                        <label for="arrive">Year</label>
-                        <input type="number" id="arrive" name="arrive" min="1" value="2020" required>
+                        <label for="year">Year</label>
+                        <input type="number" id="year" name="year" min="1" value="2020" required>
 
                     </div>
                 </div>
@@ -117,7 +123,7 @@
 
             <div class="form-actions">
                 <a href="myRides.html">Cancel</a>
-                <button type="submit">Create</button>
+                <button type="submit">Save</button>
             </div>
 
 
