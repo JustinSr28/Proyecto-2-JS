@@ -22,15 +22,20 @@
             <ul class="menuPrincipal">
                 <li><a href="searchRides.html">Home</a></li>
                 <li class="activo"> <a href="myRides.html">Rides</a></li>
-                <li><a href="bookings.html">Bookings</a></li>
+                <li> <a href="bookings.html">Bookings</a></li>
             </ul>
 
             <div class="accionesAdicionales">
                 <input type="text" id="search" placeholder="Search..." />
-                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+                <div class="dropdown">
+                    <img src="imagenes/usuario.png" alt="User" onclick="toggleMenu()">
+                    <div id="userMenu" class="dropdown-content">
+                        <a href="editProfile.html">Profile</a>
+                        <a href="configuration.html">Configuration</a>
+                        <a href="#" onclick="logout()">Log out</a>
+                    </div>
+                </div>
             </div>
-
-
         </nav>
     </header>
 
@@ -40,7 +45,7 @@
     <h1>My rides</h1>
 
     <div class="rides-actions">
-        <a href="NewRide.html" class="btn">New Ride</a>
+        <a href="NewRide.html" class="btn" id="btnRide">New Ride</a>
     </div>
 
     <table>

@@ -28,10 +28,15 @@
 
             <div class="accionesAdicionales">
                 <input type="text" id="search" placeholder="Search..." />
-                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+                <div class="dropdown">
+                    <img src="imagenes/usuario.png" alt="User" onclick="toggleMenu()">
+                    <div id="userMenu" class="dropdown-content">
+                        <a href="editProfile.html">Profile</a>
+                        <a href="configuration.html">Configuration</a>
+                        <a href="#" onclick="logout()">Log out</a>
+                    </div>
+                </div>
             </div>
-
-
         </nav>
     </header>
 
@@ -90,28 +95,19 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="marca">Make</label>
-                        <select id="marca" name="marca" required>
-                            <option value="Nissan">Nissan</option>
-                            <option value="Toyota">Toyota</option>
-                            <option value="Hyundai">Hyundai</option>
-                            <option value="Kia">Kia</option>
-                            <option value="Mazda">Mazda</option>
-                            <option value="Honda">Honda</option>
-                            <option value="Chevrolet">Chevrolet</option>
-                            <option value="Ford">Ford</option>
-                        </select>
+                        <input type="text" id="marca" name="marca" placeholder="marca" readonly>
 
                     </div>
 
                     <div class="form-group">
                         <label for="model">Model</label>
-                        <input type="text" id="model" name="carModel" placeholder="Car model" required>
+                        <input type="text" id="model" name="model" placeholder="Car model" readonly>
 
                     </div>
 
                     <div class="form-group">
                         <label for="year">Year</label>
-                        <input type="number" id="year" name="year" min="1" value="2020" required>
+                        <input type="text" id="year" name="year" readonly>
 
 
                     </div>

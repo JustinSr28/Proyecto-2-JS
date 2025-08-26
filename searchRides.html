@@ -6,6 +6,8 @@
     <title>Proyecto 01</title>
     <link rel="stylesheet" href="CSS/stylesSearchRides.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="JS/searchRides.js"></script>
+
 
 </head>
 
@@ -18,17 +20,22 @@
 
         <nav id="Navegacion">
             <ul class="menuPrincipal">
-                <li class="activo"><a href="searchRides.html">Home</a></li>
-                <li><a href="myRides.html">Rides</a></li>
+                <li  class="activo"><a href="searchRides.html">Home</a></li>
+                <li> <a href="myRides.html">Rides</a></li>
                 <li><a href="bookings.html">Bookings</a></li>
             </ul>
 
             <div class="accionesAdicionales">
                 <input type="text" id="search" placeholder="Search..." />
-                <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil" />
+                <div class="dropdown">
+                    <img src="imagenes/usuario.png" alt="User" onclick="toggleMenu()">
+                    <div id="userMenu" class="dropdown-content">
+                        <a href="editProfile.html">Profile</a>
+                        <a href="configuration.html">Configuration</a>
+                        <a href="#" onclick="logout()">Log out</a>
+                    </div>
+                </div>
             </div>
-
-
         </nav>
     </header>
 
@@ -43,34 +50,32 @@
                 <div class="form-group">
                     <label for="from">From</label>
                     <select id="from" name="from" required>
-                        <option value="">Seleccione partida</option>
-                        <option value="San José">Ciudad Quesada</option>
+                      
                         <option value="Alajuela">Alajuela</option>
                         <option value="Cartago">Cartago</option>
                         <option value="Heredia">Heredia</option>
                         <option value="Guanacaste">Guanacaste</option>
                         <option value="Puntarenas">Puntarenas</option>
-                        <option value="Limón">Limón</option>
+                        <option value="Limon">Limon</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="to">To</label>
                     <select id="to" name="to" required>
-                        <option value="">Seleccione llegada</option>
-                        <option value="San José">Zarcero</option>
+                        
                         <option value="Alajuela">Alajuela</option>
                         <option value="Cartago">Cartago</option>
                         <option value="Heredia">Heredia</option>
                         <option value="Guanacaste">Guanacaste</option>
                         <option value="Puntarenas">Puntarenas</option>
-                        <option value="Limón">Limón</option>
+                        <option value="Limon">Limon</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <div class="rides-actions">
-                        <a href="searchRidesv2.html" class="btn">Find Rides</a>
+                        <a href="#" class="btn" id="findRidesBtn">Find Rides</a>
                     </div>
                 </div>
             </div>
@@ -88,8 +93,37 @@
 
         </div>
 
-        
+        <div class="rides-results">
 
+
+            <p class="rides-label">
+                Rides found.
+            </p>
+
+
+            <table class="rides-table">
+                <thead>
+                    <tr>
+                        <th>Driver</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Seats</th>
+                        <th>Car</th>
+                        <th>Fee</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps?q=40.712776,-74.005974&hl=es&z=14&output=embed">
+                </iframe>
+            </div>
+        </div>
     </main>
 
 
