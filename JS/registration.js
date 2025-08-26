@@ -8,16 +8,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function storeInputs() {
-    const name = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-    const password2 = document.getElementById('confirmPassword').value;
-    const address = document.getElementById('address').value.trim();
-    const country = document.getElementById('country').value;
-    const state = document.getElementById('state').value.trim();
-    const city = document.getElementById('city').value.trim();
-    const phone = document.getElementById('phone').value.trim();
+    let name = document.getElementById('firstName').value.trim();
+    let lastName = document.getElementById('lastName').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let password = document.getElementById('password').value;
+    let password2 = document.getElementById('confirmPassword').value;
+    
+    let cedula = document.getElementById('cedula').value.trim();
+    let birthday = document.getElementById('fecha').value.trim();  
+    let phone = document.getElementById('phone').value.trim();
+    let biblio = "";
+    let marca = "N/A";
+    let modelo = "N/A";
+    let year = "N/A";
+    let placa = "N/A";
+    let driver = false;
 
     // Expresiones regulares
     const nameRegex = /^[A-Za-z¡…Õ”⁄·ÈÌÛ˙Ò—\s]+$/; // Solo letras y espacios
@@ -50,23 +55,26 @@ function storeInputs() {
         alert('Passwords do not match. Please try again.');
         return false;
     }
-    if (!country) {
-        alert('Please select a country.');
-        return false;
-    }
+   
 
     // Si pasa todas las validaciones, guardar en localStorage
     const userData = {
+        id: generateUUID(), 
         name,
         lastName,
         email,
         password,
-        address,
-        country,
-        state,
-        city,
-        phone
+        cedula,
+        birthday,
+        phone,
+        biblio,
+        marca,
+        modelo,
+        year,
+        driver,
+        placa,
     };
+
 
     let users = JSON.parse(localStorage.getItem('users')) || [];
     users.push(userData);
@@ -79,4 +87,11 @@ function storeInputs() {
     }, 1000);
 
     return true;
+}
+
+function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
 }
