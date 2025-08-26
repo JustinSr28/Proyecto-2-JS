@@ -48,7 +48,7 @@
             <div class="form-row">
 
                 <div class="form-group">
-                    <label id="labelName" for="InputName"> First Name </label>
+                    <label id="labelName" for="inputName"> First Name </label>
                     <input type="text" id="inputName" name="InputName" />
                 </div>
                 <div class="form-group">
@@ -106,7 +106,8 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="marca">Make</label>
-                        <select id="marca" name="marca" required>
+                        <select id="marca" name="marca">
+                            <option value="" disabled selected>Select a make</option>
                             <option value="Nissan">Nissan</option>
                             <option value="Toyota">Toyota</option>
                             <option value="Hyundai">Hyundai</option>
@@ -116,23 +117,23 @@
                             <option value="Chevrolet">Chevrolet</option>
                             <option value="Ford">Ford</option>
                         </select>
-
+                        
                     </div>
 
                     <div class="form-group">
                         <label for="model">Model</label>
-                        <input type="text" id="model" name="carModel" placeholder="Car model" required>
+                        <input type="text" id="model" name="carModel" placeholder="Car model">
 
                     </div>
 
                     <div class="form-group">
                         <label for="year">Year</label>
-                        <input type="number" id="year" name="year" min="1" value="2020" required>
+                        <input type="number" id="year" name="year" min="1" value="2020">
                     </div>
 
                     <div class="form-group">
                         <label for="placa">Licence</label>
-                        <input type="text" id="placa" name="placa" required>
+                        <input type="text" id="placa" name="placa">
                     </div>
 
                 </div>

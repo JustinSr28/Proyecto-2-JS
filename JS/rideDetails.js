@@ -12,19 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const requestBtn = document.getElementById("requestBtn");
 
-    requestBtn.addEventListener("click", function () {
+    requestBtn.addEventListener("click", function () { //Si se da click en el boton de request
         const params = new URLSearchParams(window.location.search);
         const rideId = params.get("id");
 
         if (rideId) {
 
-            window.location.href = `bookings.html?id=${rideId}`;
+            window.location.href = `bookings.html?id=${rideId}`; //Pasamos id a bookings
         }
     });
 
 });
 
-function cargarDatos(rideId) {
+function cargarDatos(rideId) { //carga todos los datos del ride seleccionado
    
 
     let rides = JSON.parse(localStorage.getItem("myRides")) || [];
@@ -40,7 +40,7 @@ function cargarDatos(rideId) {
         document.getElementById("fee").value = ride.fee;
 
 
-        const checkboxes = document.querySelectorAll('input[name="days"]');
+        const checkboxes = document.querySelectorAll('input[name="days"]'); //cargamos los dias que habian en el arrayDias
         checkboxes.forEach(chk => {
            
             chk.checked = ride.days.includes(chk.value);
@@ -54,7 +54,7 @@ function cargarDatos(rideId) {
 
 
 
-
+//Cambiamos la clase del menu desplegable, para que se muestre
 function toggleMenu() {
     document.getElementById("userMenu").classList.toggle("show");
 }

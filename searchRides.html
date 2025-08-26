@@ -50,7 +50,7 @@
                 <div class="form-group">
                     <label for="from">From</label>
                     <select id="from" name="from" required>
-                      
+                        <option value="" disabled selected>Select origin</option>
                         <option value="Alajuela">Alajuela</option>
                         <option value="Cartago">Cartago</option>
                         <option value="Heredia">Heredia</option>
@@ -58,12 +58,13 @@
                         <option value="Puntarenas">Puntarenas</option>
                         <option value="Limon">Limon</option>
                     </select>
+
                 </div>
 
                 <div class="form-group">
-                    <label for="to">To</label>
+                    <label for="to">From</label>
                     <select id="to" name="to" required>
-                        
+                        <option value="" disabled selected>Select origin</option>
                         <option value="Alajuela">Alajuela</option>
                         <option value="Cartago">Cartago</option>
                         <option value="Heredia">Heredia</option>
@@ -71,6 +72,7 @@
                         <option value="Puntarenas">Puntarenas</option>
                         <option value="Limon">Limon</option>
                     </select>
+
                 </div>
 
                 <div class="form-group">
@@ -81,7 +83,7 @@
             </div>
 
             <div class="days">
-                <label for="date" id="Labeldays">Days</label>
+                <label id="Labeldays">Days</label>
                 <label><input type="checkbox" name="days" value="Mon" checked> Mon</label>
                 <label><input type="checkbox" name="days" value="Tue" checked> Tue</label>
                 <label><input type="checkbox" name="days" value="Wed" checked> Wed</label>
@@ -114,9 +116,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        
-                    </tr>
                 </tbody>
             </table>
             <div class="map-container">

@@ -21,7 +21,7 @@ window.onclick = function (event) {
     }
 }
 
-function logout() {
+function logout() { //borramos el sessionStorage 
     sessionStorage.removeItem("loggedUser");
     window.location.href = "index.html";
 }
@@ -38,7 +38,7 @@ function loadRides() {
 
     const botonRides = document.getElementById('btnRide');
 
-    if (!usuario.driver) {
+    if (!usuario.driver) { //Esto es para ocultar el boton dado caso que el usuario logueado no sea conductor
         botonRides.style.display = 'none';
         return;
     }

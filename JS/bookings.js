@@ -1,10 +1,10 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search); // URLSearchParams para obtener el ID del ride  
     const rideId = params.get("id");
 
     if (rideId) {
         solicitarRide(rideId);
-    } else { console.log("NO id") }
+    }  
 
     renderTablaBookings(); 
 });
@@ -26,18 +26,18 @@ window.onclick = function (event) {
     }
 }
 
-function logout() {
+function logout() { //Elimina el registro loggedUser al cerrar sesion
     sessionStorage.removeItem("loggedUser");
     window.location.href = "index.html"; 
 }
 
 
 function solicitarRide(rideId) {
-    let solicitudes = JSON.parse(localStorage.getItem("ridesSolicitados")) || [];
-    const userId = JSON.parse(sessionStorage.getItem("loggedUser")).id;
+    let solicitudes = JSON.parse(localStorage.getItem("ridesSolicitados")) || []; //Solicitudes de rides
+    const userId = JSON.parse(sessionStorage.getItem("loggedUser")).id; //tomamos id del usuario logueado
 
    
-    let rides = JSON.parse(localStorage.getItem("myRides")) || [];
+    let rides = JSON.parse(localStorage.getItem("myRides")) || []; //almacenamos rides para haecr comparacion
 
     let ride = rides.find(r => r.id === rideId);
 
@@ -47,7 +47,7 @@ function solicitarRide(rideId) {
     let existente = solicitudes.find(s => s.idUser === userId && s.rideId === rideId);
 
     if (!existente) {
-        const rideSolicitado = {
+        const rideSolicitado = { //Se creo objeto de solicitud
             id: generateUUID(), 
             idUser: userId,
             estado: "pendiente",
@@ -60,7 +60,7 @@ function solicitarRide(rideId) {
     }
 }
 
-function renderTablaBookings() {
+function renderTablaBookings() { //Cargamos la tabla con los datos
     const usuarioStr = sessionStorage.getItem("loggedUser");
     if (!usuarioStr) return;
     const usuario = JSON.parse(usuarioStr);
@@ -91,7 +91,7 @@ function renderTablaBookings() {
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td>${s.userName || s.idUser}</td>
-                <td>${ride.departure} → ${ride.arrive}</td>
+                <td>${ride.departure} to ${ride.arrive}</td>
                 <td>
                     <button onclick="aceptarSolicitud('${s.id}')">Aceptar</button>
                     <button onclick="rechazarSolicitud('${s.id}')">Rechazar</button>
@@ -108,7 +108,7 @@ function renderTablaBookings() {
             const ride = rides.find(r => r.id === s.rideId);
             if (!ride) return;
 
-            let acciones = "";
+            let acciones = ""; //Son las opciones según el estado del ride
             if (s.estado === "pendiente") {
                 acciones = `<button onclick="cancelarSolicitud('${s.id}')">Cancelar</button>`;
             } else if (s.estado === "aceptado") {
@@ -116,7 +116,7 @@ function renderTablaBookings() {
             } else if (s.estado === "rechazado") {
                 acciones = `<span style="color: red; font-weight: bold;">Rechazado</span>`;
             }
-
+            //cargamos la tabla lista
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td>${ride.driverName || "Driver"}</td>
@@ -127,7 +127,7 @@ function renderTablaBookings() {
         });
     }
 }
-
+//ID random
 function generateUUID() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
         const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
@@ -153,7 +153,7 @@ function rechazarSolicitud(idSolicitud) {
     location.reload();
 }
 
-// RIDER: cancelar
+// RIDER: cancelar, elimino la solicitud
 function cancelarSolicitud(idSolicitud) {
     let solicitudes = JSON.parse(localStorage.getItem("ridesSolicitados")) || [];
     solicitudes = solicitudes.filter(s => s.id !== idSolicitud);

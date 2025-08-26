@@ -19,7 +19,7 @@ window.onclick = function (event) {
         }
     }
 }
-
+//Elimina el registro loggedUser al cerrar sesion
 function logout() {
     sessionStorage.removeItem("loggedUser");
     window.location.href = "index.html";
@@ -28,15 +28,15 @@ function logout() {
 
 function loadRidesEdit() {
     const params = new URLSearchParams(window.location.search);
-    const rideId = params.get('id');
+    const rideId = params.get('id'); //traemos el id pasada por URL
 
 
-    let rides = JSON.parse(localStorage.getItem('myRides')) || [];
-    let ride = rides.find(r => r.id === rideId);
+    let rides = JSON.parse(localStorage.getItem('myRides')) || []; //cargamos los rides
+    let ride = rides.find(r => r.id === rideId); //buscamos el ride con el id pasado por URL
 
 
 
-    // 3. Rellenar los campos
+    // Rellenamos los campos con la info del ride
     document.getElementById('departure').value = ride.departure;
     document.getElementById('arrive').value = ride.arrive;
     document.getElementById('seats').value = ride.seats;
@@ -46,7 +46,7 @@ function loadRidesEdit() {
     document.getElementById('fee').value = ride.fee;
    
 
-    // 4. Guardar cambios
+    //Guardar cambios del ride
     document.getElementById('editRideForm').addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -58,12 +58,12 @@ function loadRidesEdit() {
         ride.car.year = document.getElementById('year').value;
         ride.fee = document.getElementById('fee').value;
         ride.days = Array.from(document.querySelectorAll('input[name="days"]:checked')) //Array para guardar Los dias marcados
-            .map(day => day.value);
+            .map(day => day.value); //Array de dias
 
         // Actualizar en localStorage
         localStorage.setItem('myRides', JSON.stringify(rides));
 
-       
+        // Redireccionar a la página de mis rides
         window.location.href = "myRides.html";
     });
 

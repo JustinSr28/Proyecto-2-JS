@@ -21,7 +21,7 @@ window.onclick = function (event) {
         }
     }
 }
-
+//Elimina el registro loggedUser al cerrar sesion
 function logout() {
     sessionStorage.removeItem("loggedUser");
     window.location.href = "index.html";
@@ -37,7 +37,7 @@ function loadInfoUser() {
 
     const idUsuario = usuario.id;
 
-    // 1. Rellenar los campos
+    // Rellenamos los campos con la info del usuario
     document.getElementById('inputName').value = usuario.name;
     document.getElementById('InputLastName').value = usuario.lastName;
     document.getElementById('Email').value = usuario.email;
@@ -51,9 +51,10 @@ function loadInfoUser() {
     document.getElementById('year').value = usuario.year;
     document.getElementById('placa').value = usuario.placa;
 
-    // 2. Guardar cambios
+    //Guardar cambios al momento de dar submit
     document.getElementById('editFormUser').addEventListener('submit', (e) => {
         e.preventDefault();
+
         // Actualizar los campos del usuario
         usuario.name = document.getElementById('inputName').value;
         usuario.lastName = document.getElementById('InputLastName').value;
@@ -66,10 +67,21 @@ function loadInfoUser() {
         usuario.modelo = document.getElementById('model').value;
         usuario.year = document.getElementById('year').value;
         usuario.placa = document.getElementById('placa').value;
-        // Actualizar en sessionStorage
-        sessionStorage.setItem("loggedUser", JSON.stringify(usuario));
-        // Redireccionar a la página de perfil
-        window.location.href = "profile.html";
-    });
 
+        //Actualiza el SessionStorage
+        sessionStorage.setItem("loggedUser", JSON.stringify(usuario));
+
+        //Cambia el localStorage
+        let usuarios = JSON.parse(localStorage.getItem("users")) || [];
+        const index = usuarios.findIndex(u => u.id === idUsuario);
+        if (index !== -1) {
+            usuarios[index] = usuario; 
+            localStorage.setItem("users", JSON.stringify(usuarios));
+        }
+
+      
+    });
 }
+
+
+

@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
+//Cambia de clase el menú desplegable para poder mostrarlo
 function toggleMenu() {
     document.getElementById("userMenu").classList.toggle("show");
 }
 
-
+//Verifica que el click se dió fuera del menú desplegable para cerrarlo
 window.onclick = function (event) {
     if (!event.target.matches('.dropdown img')) {
         let dropdowns = document.getElementsByClassName("dropdown-content");
@@ -31,7 +31,7 @@ window.onclick = function (event) {
         }
     }
 }
-
+ //borramos el registro de sessionStorage al cerrar sesion
 function logout() {
     sessionStorage.removeItem("loggedUser");
     window.location.href = "index.html";
@@ -46,8 +46,8 @@ function filterRides(from, to, days) {
 
     const filtered = rides.filter(ride =>
         ride.idUser !== usuarioStr.id && // no mostrar viajes del usuario logueado
-        ride.departure === from &&
-        ride.arrive === to &&
+        ride.departure === from && //Coincidancia de origen
+        ride.arrive === to && //Coincidencia de destino
         ride.estado === "activo" && // solo viajes activos
         ride.days.some(d => days.includes(d)) // intersección con los días seleccionados
     );
@@ -57,7 +57,7 @@ function filterRides(from, to, days) {
         row.innerHTML = `
             <td>
                 <div class="userInfo">
-                    <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil">
+                    <img src="imagenes/usuario.png" alt="Foto perfil" class="perfil"> 
                     <span class="username">${ride.driverName || "Driver"}</span>
                 </div>
             </td>

@@ -29,26 +29,35 @@ function loadInfoUser() {
 
     // usuario logueado
     const usuarioStr = sessionStorage.getItem("loggedUser");
-    if (!usuarioStr) return; // nadie logueado
+    if (!usuarioStr) return; // nadie logueado, para pruebas
     const usuario = JSON.parse(usuarioStr);
 
     const idUsuario = usuario.id;
 
-    // 1. Rellenar los campos
+    //Rellenamos los campos
     document.getElementById('name').value = usuario.name;
-    document.getElementById('bio').value = usuario.bio;
-    
-   
+    document.getElementById('bio').value = usuario.biblio;
 
-    // 2. Guardar cambios
+    //Guardamos cambios
     document.getElementById('formConfig').addEventListener('submit', (e) => {
         e.preventDefault();
+
         // Actualizar los campos del usuario
         usuario.name = document.getElementById('name').value;
-        usuario.bio = document.getElementById('bio').value;
-        // Actualizar en sessionStorage
+        usuario.biblio = document.getElementById('bio').value;
+
+        // Actualizamos en sessionStorage 
         sessionStorage.setItem("loggedUser", JSON.stringify(usuario));
-        // Redireccionar a la página de perfil
+
+        //Actualizamos el localStorage
+        let usuarios = JSON.parse(localStorage.getItem("users")) || [];
+        const index = usuarios.findIndex(u => u.id === idUsuario);
+        if (index !== -1) {
+            usuarios[index] = usuario; //sustituir con datos nuevos
+            localStorage.setItem("users", JSON.stringify(usuarios));
+        }
+
+        
         window.location.href = "configuration.html";
     });
 }
