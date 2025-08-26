@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto 01</title>
+    <link rel="stylesheet" href="CSS/stylesRegistroDriver.css">
+    <script src="JS/app.js"></script>
+    <script src="JS/registrationDriver.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="imagenLogo">
+            <img src="imagenes/aventones.png" alt="logo de la pagina" />
+        </div>
+    </header>
+
+    <main class="registration-container">
+        <h1>Driver Registration</h1>
+        <hr>  <!-- Raya -->
+
+
+
+        <form action="#" method="post" class="registration-form" id="registration_form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Repeat Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cedula">ID</label>
+                <input type="text" id="cedula" name="cedula" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha">Date birthday</label>
+                    <input type="date" id="fecha" name="fecha" max="2025-08-24">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <label id="vehicle">Vehicle Details</label>
+
+            <div id="vehicle-Details">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="marca">Make</label>
+                        <select id="marca" name="marca" required>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Ford">Ford</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" id="model" name="carModel" placeholder="Car model" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="number" id="year" name="year" min="1" value="2020" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="placa">Licence</label>
+                        <input type="text" id="placa" name="placa" required>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-links">
+                <p>Already an user? <a href="index.html">Login here</a></p>
+                <p>Register as User? <a href="registro.html">Click here</a></p>
+            </div>
+
+            <button type="submit" class="btn-submit">Sign Up</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="searchRides.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="configuration.html">Settings</a> |
+            <a href="index.html">Login</a> |
+            <a href="registro.html">Register</a>
+        </nav>
+        <p>&copy; Aventones.com</p>
+    </footer>
+
+</body>
+
+
+
+</html>

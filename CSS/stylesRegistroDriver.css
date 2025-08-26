@@ -1,0 +1,178 @@
+header {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+:root {
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+
+body {
+    font-family: var(--fuente-principal);
+    background: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.registration-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+    .registration-container h1 {
+        font-weight: 300;
+        margin-bottom: 5px;
+        letter-spacing: 5px;
+    }
+
+    .registration-container hr {
+        width: 200px;
+        border: 1px solid #ccc;
+        margin-bottom: 50px;
+    }
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+.form-links {
+    display: flex;
+    justify-content: center; /* centra horizontalmente el contenido */
+    align-items: center; /* alinea verticalmente al centro si hay diferencia de altura */
+    gap: 50px; /* espacio entre el texto y el link */
+    font-size: 14px;
+}
+
+
+    .form-links a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+        .form-links a:hover {
+            text-decoration: underline;
+        }
+
+
+#vehicle {
+    text-align: left;
+    width: 100%; /* O igual al ancho del contenedor del formulario */
+    display: block; /* Para que se vea en línea aparte */
+}
+
+#vehicle-Details {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 50px 20px;
+    text-align: left; /* para alinear los labels e inputs a la izquierda */
+}
+
+
+    #vehicle-Details .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1; /* que cada input ocupe el mismo ancho posible */
+        min-width: 100px;
+    }
+
+    #vehicle-Details label {
+        margin-bottom: 5px;
+        font-weight: normal;
+    }
+
+input[type="number"] {
+    width: 80px;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+   
+    box-sizing: border-box;
+}
+
+
+#model {
+    color: grey; /* Color gris para el texto del modelo */
+}
+
+.btn-submit {
+    margin: 20px auto;
+    display: block;
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 25%;
+    text-decoration: none;
+}
+
+    .btn-submit:hover {
+        background: #333;
+    }
+
+@media(max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ccc; /*  aquí se agrega la línea */
+    font-size: 14px;
+    color: #666;
+    background: none;
+}
+
+
+    footer nav a {
+        margin: 0 8px; /* Espacio horizontal entre links */
+        text-decoration: none; /* Quita subrayado */
+        color: #666; /* Color igual al resto del footer */
+    }
+
+        footer nav a:hover {
+            text-decoration: underline; /* Subraya el link al pasar el mouse para indicar interactividad */
+        }
