@@ -1,12 +1,11 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --fuente-principal: 'Roboto', sans-serif;
 }
 
+
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fuente-principal);
 }
 
 
@@ -62,12 +61,6 @@ nav#Navegacion {
         border-radius: 3px;
     }
 
-/* Contenedor */
-.accionesAdicionales {
-    display: flex;
-    align-items: center;
-    gap: 50px; /* Aqui si va gab ya que es separacion de los elementos dentro del contenedor*/
-}
 
 #search {
     border: 1px solid #ccc; /* Se hace borde */
@@ -77,11 +70,10 @@ nav#Navegacion {
     padding: 0 10px; /* Separa lo de adentro del input */
 }
 
-.perfil {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%; /* Imagen redonda */
-    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+.accionesAdicionales {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre los elementos dentro del contenedor */
 }
 
 
@@ -112,29 +104,50 @@ main {
         margin-left: 20px; /* Espacio entre el título y las opciones de usuario */
     }
 
-#options {
 
-    margin-top: -50px; /* está mal pero no entiendo que hacer */
-    width: 15%;
-    height: 15%;
 
-    text-align: left;
-    border: 2px solid black; /* borde negro */
- 
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-    #options a {
-        text-decoration: none; /* Quita subrayado */
-        color: black; /* Color igual al resto del footer */
+    /* Imagen del usuario */
+    .dropdown img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
     }
 
-#userOptions td {
-    border-bottom: 2px solid black; /* línea divisoria negra */
+/* Contenido del dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    z-index: 1;
 }
 
-#seleccionado {
-    background-color: lightgrey;
-   
+    /* Links del menú */
+    .dropdown-content a {
+        color: black;
+        padding: 10px 14px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #eee;
+        }
+
+/* Mostrar el menú cuando tenga la clase "show" */
+.show {
+    display: block;
 }
 
 

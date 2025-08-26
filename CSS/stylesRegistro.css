@@ -3,10 +3,16 @@
     justify-content: center; /* Centra el contenido horizontalmente */
 }
 
+:root {
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+
+
 
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--fuente-principal);
     background: #fff;
     color: #333;
     margin: 0;
@@ -16,7 +22,6 @@ body {
 .registration-container {
     max-width: 600px;
     margin: 50px auto;
-    padding: 50px;
     text-align: center;
 }
 
