@@ -19,8 +19,6 @@ function loginUser() {
     );
 
     if (foundUser) {
-        alert(`Welcome ${foundUser.name}!`);
-        // Guardar usuario logueado en sessionStorage para poder usarlo como identificador
         sessionStorage.setItem('loggedUser', JSON.stringify(foundUser));
         // Redirige a página principal
         window.location.href = "myRides.html";
